@@ -11,6 +11,8 @@
     /* 自訂 navbar 背景顏色 */
     :root {
       --bs-coffee-rgb: 0, 0, 0;
+      --bs-border-color-translucent: none;
+
     }
 
     .bg-coffee {
@@ -21,6 +23,10 @@
     /* .navbar-toggler {
       filter: invert(50%) sepia(2%) saturate(22%) hue-rotate(325deg) brightness(99%) contrast(84%);
     } */
+
+    #card_x3 .card {
+      border: 1px solid #999;
+    }
 
     #coffee_shop .card-title {
       font-size: 2rem;
@@ -41,10 +47,7 @@
     }
 
     @media (min-width: 992px) {
-      body {
-        --bs-border-color-translucent: none;
 
-      }
 
       #myCarousel {
         height: 100vh;
@@ -64,15 +67,6 @@
         width: 50%;
       }
 
-      #coffee_shop .card {
-        border-color: var(--bs-border-color-translucent);
-      }
-
-      /* #footerContact .list-group {
-        --bs-list-group-color: #ffffff;
-        --bs-list-group-bg: rgba(255, 255, 255, 0);
-        --bs-list-group-border-color: none;
-      } */
     }
   </style>
 </head>
@@ -146,36 +140,26 @@
         <div class="carousel-item">
           <img src="https://picsum.photos/1920/1080/?random=1" class="d-block w-100">
           <div class="carousel-caption d-none d-md-block">
-            <h5>第一張</h5>
-            <p>第一張的內容</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://picsum.photos/1920/1080/?random=2" class="d-block w-100">
           <div class="carousel-caption d-none d-md-block">
-            <h5>第二張</h5>
-            <p>第二張的內容</p>
           </div>
         </div>
         <div class="carousel-item active">
           <img src="https://picsum.photos/1920/1080/?random=3" class="d-block w-100">
           <div class="carousel-caption d-none d-md-block">
-            <h5>第三張</h5>
-            <p>第三張的內容</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://picsum.photos/1920/1080/?random=4" class="d-block w-100">
           <div class="carousel-caption d-none d-md-block">
-            <h5>第四張</h5>
-            <p>第四張的內容</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://picsum.photos/1920/1080/?random=5" class="d-block w-100">
           <div class="carousel-caption d-none d-md-block">
-            <h5>第五張</h5>
-            <p>第五張的內容</p>
           </div>
         </div>
       </div>
@@ -190,7 +174,7 @@
     </div>
   </div>
   <!-- card*3 -->
-  <div class="container-fluid px-3 py-4">
+  <div id="card_x3" class="container-fluid px-3 py-4">
     <div class="row">
       <div class="col-12 col-lg-4 mb-4">
         <div class="card">
@@ -231,12 +215,12 @@
     </div>
   </div>
   <!-- card*2 -->
-  <div id="coffee_shop" class="container-fluid px-0">
+  <div id="coffee_shop" class="container-fluid pt-4 pt-lg-0 bg-light">
     <div class="row">
-      <div class="col-12 col-lg-12 px-0">
-        <div class="card flex-lg-row">
+      <div class="col-auto px-0">
+        <div class="card flex-lg-row bg-light">
           <img src="https://picsum.photos/1920/1080/?random=1">
-          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <div class="card-body d-flex  flex-column justify-content-center align-items-center">
             <h5 class="card-title align-self-center">Coffee Shop</h5>
             <p class="card-text align-self-center py-2 px-3">
               本站然後但我解釋網站國內等方面，眾多線路硬體前面聽到，建立思考房地產，故事限制科技一部篇文章請在，文檔留言板夢幻畢竟把它仔細程式站在青年具有吃了接受，交友許可印度有意站在關閉榮譽裝飾儘快東方就會，稱。</p>
@@ -244,8 +228,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-12 px-0">
-        <div class="card flex-lg-row">
+      <div class="col-auto px-0">
+        <div class="card flex-lg-row bg-light">
           <img src="https://picsum.photos/1920/1080/?random=2" class="order-lg-2">
           <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <h5 class="card-title align-self-center ">Coffee Shop</h5>
@@ -276,9 +260,9 @@
           <label for="inputName" class="form-label">姓名</label>
           <div class="input-group">
             <input type="text" class="form-control" id="inputName" required>
-            <div class="input-group-text">
+            <div class="input-group-text" required>
               先生
-              <input class="form-check-input mt-0" type="radio" value="" name="gender">
+              <input class="form-check-input mt-0" type="radio" value="" name="gender" required>
               小姐
               <input class="form-check-input mt-0" type="radio" value="" name="gender">
             </div>
@@ -286,8 +270,8 @@
         </div>
         <div class="col-lg-6">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">電話</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" required>
+            <label for="exampleInputNumber" class="form-label">電話</label>
+            <input type="number" class="form-control" id="exampleInputNumber" required>
           </div>
         </div>
 
@@ -302,9 +286,9 @@
             <label for="exampleInputEmail1" class="form-label">問題類型</label>
             <select class="form-select" required>
               <option selected disabled value="">Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">餐飲建議</option>
+              <option value="2">價格建議</option>
+              <option value="3">服務建議</option>
             </select>
           </div>
         </div>
@@ -312,8 +296,8 @@
         <div class="col-12">
           <div class="mb-3">
             <div class="mb-3">
-              <label for="validationTextarea" class="form-label">Textarea</label>
-              <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea"
+              <label for="validationTextarea" class="form-label">意見需求</label>
+              <textarea class="form-control " id="validationTextarea" placeholder="Required example textarea"
                 required></textarea>
               <!-- <div class="invalid-feedback">
                 Please enter a message in the textarea.
@@ -327,7 +311,7 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
             <label class="form-check-label mb-2" for="invalidCheck">
-              Agree to terms and conditions
+              訂閱泰山莊園最新資訊
             </label>
             <div class="invalid-feedback">
               You must agree before submitting.
@@ -341,54 +325,42 @@
     </form>
   </div>
   <!-- footerContact -->
-  <div id="footerContact" class="container-fluid bg-dark py-5">
+  <div id="footerContact" class="container-fluid bg-dark py-4">
     <div class="row px-3 justify-content-evenly">
-      <!-- logo -->
+      <!-- Logo -->
       <div class="col-auto d-flex align-items-center">
-        <img src="https://picsum.photos/300/200/?random=10"
-          style="width: 100px; height: 100px; clip-path: circle(50% at 50% 50%);">
+        <img src="https://picsum.photos/350/200/?random=10"
+          style="width: 150px; height: 150px; clip-path: circle(50% at 50% 50%);">
       </div>
-      <!-- address -->
-      <div class="col-auto">
+      <!-- Address -->
+      <div class="col-auto ms-3 ms-lg-0">
         <ul class="list-group">
-          <li class="list-group-item p-0">Address</li>
-          <li class="list-group-item p-0">A second item</li>
-          <li class="list-group-item p-0">A third item</li>
+          <li class="list-group-item p-0 my-1">Address</li>
+          <li class="list-group-item p-0 w-75 ">123 street Name city, AA 9999</li>
+          <!-- <li class="list-group-item p-0">A third item</li> -->
         </ul>
       </div>
-      <!-- link -->
+      <!-- Links -->
       <div class="col-auto">
-        <!-- <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-        </div> -->
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            The current link item
-          </a>
-          <a href="#" class="list-group-item list-group-item-action p-0">A second link item</a>
-          <a href="#" class="list-group-item list-group-item-action p-0">A third link item</a>
-          <a href="#" class="list-group-item list-group-item-action p-0">A fourth link item</a>
-        </div>
+        <ul class="list-group list-group-flush">
+          <li href="#" class="p-0 my-1 list-group-item ">Links</li>
+          <a href="#" class="p-0 list-group-item list-group-item-action">Website buider</a>
+          <a href="#" class="p-0 list-group-item list-group-item-action">Download for Windows</a>
+          <a href="#" class="p-0 list-group-item list-group-item-action">Download for Mac</a>
+        </ul>
       </div>
-      <!-- contacts -->
+      <!-- Contacts -->
       <div class="col-auto">
         <ul class="list-group">
-          <li class="list-group-item p-0">An item</li>
-          <li class="list-group-item p-0">A second item</li>
-          <li class="list-group-item p-0">A third item</li>
-          <li class="list-group-item p-0">A fourth item</li>
+          <li class="list-group-item p-0 my-1">Contacts</li>
+          <li class="list-group-item p-0">Email: support@example.com</li>
+          <li class="list-group-item p-0">Phone: +1 (7) 777 777 777</li>
+          <li class="list-group-item p-0">Fax: +1 (7) 666 666 666</li>
         </ul>
       </div>
 
       <div class="col-12 d-flex justify-content-center mt-5 mb-0">
-        <p class="p-0" style="color:white;">@ Copyright 2022 W - All Rights Reserved</p>
+        <p class="p-0 m-0" style="color:white;">@ Copyright 2022 W - All Rights Reserved</p>
       </div>
     </div>
   </div>
